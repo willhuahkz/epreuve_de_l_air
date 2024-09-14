@@ -28,20 +28,21 @@ def sorted_array(_array, new_element):
     _array.append(new_element)
     return _array
 
-if len(sys.argv) > 2:
-    try:
-        value_to_insert = int(sys.argv[-1])
-        array = [int(arg) for arg in sys.argv[1:-1]]
-    except ValueError:
-        print('error: arguments should be only digit')
-        sys.exit(1)
-    if not is_sorted(array):
-        print('List must be sorted')
-        sys.exit(1)
-    else:
-        res = sorted_array(array, value_to_insert)
-        res_str = ' '.join(str(element) for element in res)
-        print(res_str)
+if __name__ == '__main__':
+    if len(sys.argv) > 2:
+        try:
+            value_to_insert = int(sys.argv[-1])
+            array = [int(arg) for arg in sys.argv[1:-1]]
+        except ValueError:
+            print('error: arguments should be only digit')
+            sys.exit(1)
+        if not is_sorted(array):
+            print('List must be sorted')
+            sys.exit(1)
+        else:
+            res = sorted_array(array, value_to_insert)
+            res_str = ' '.join(str(element) for element in res)
+            print(res_str)
 
-else:
-    print('error.')
+    else:
+        print('error.')
