@@ -16,7 +16,7 @@ def rotate_left(array):
 
 if len(sys.argv) > 1:
     arguments = sys.argv[1:]
-    res_str = ' '.join(rotate_left(arguments))
+    res_str = ', '.join(rotate_left(arguments))
     print(res_str)
 
 else:

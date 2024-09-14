@@ -35,4 +35,4 @@ if len(sys.argv) > 1:
         print('error: only number allowed')
 
 else:
-    print('error.')   
+    print('error.')
